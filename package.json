@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "API for live stream",
+  "main": "app.js",
+  "scripts": {
+   "start": "node app.js"
+  },
+  "author": "Dat Phan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^3.1.4",
+    "socket.io": "^4.0.2"
+  }
+}
