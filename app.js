@@ -1,13 +1,13 @@
 const express = require('express');
 const http = require('http');
 const { ExpressPeerServer } = require('peer');
-const socketIO = require('socket.io');
-
+// const socketIO = require('socket.io');
+const server = require('http').Server(app);
 // Initialize Express app
 const app = express();
 
 // Create HTTP server
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
 // Initialize Socket.IO with CORS configuration
 const io = socketIO(server, {
