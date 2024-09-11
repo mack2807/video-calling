@@ -1,13 +1,13 @@
 const express = require('express');
 const http = require('http');
 const { ExpressPeerServer } = require('peer');
-// const socketIO = require('socket.io');
-const server = require('http').Server(app);
+const socketIO = require('socket.io');
+
 // Initialize Express app
 const app = express();
 
 // Create HTTP server
-// const server = http.createServer(app);
+const server = http.createServer(app);
 
 // Initialize Socket.IO with CORS configuration
 const io = socketIO(server, {
@@ -44,5 +44,5 @@ io.on('connection', socket => {
 });
 
 // Set port for the combined server
-const port = 3002;
+const port =  3002;
 server.listen(port, () => console.log(`Server listening on port ${port}`));
