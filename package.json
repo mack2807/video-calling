@@ -4,13 +4,15 @@
   "description": "API for live stream",
   "main": "app.js",
   "scripts": {
-   "start": "node app.js"
+    "start": "node app.js"
   },
   "author": "Dat Phan",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.20.0",
+    "http": "^0.0.1-security",
     "nodemon": "^3.1.4",
-    "socket.io": "^4.0.2"
+    "peer": "^1.0.2",
+    "socket.io": "^4.7.5"
   }
 }
