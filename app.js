@@ -44,5 +44,5 @@ io.on('connection', socket => {
 });
 
 // Set port for the combined server
-const port = process.env.PORT || 3002;
+const port = 3002;
 server.listen(port, () => console.log(`Server listening on port ${port}`));
