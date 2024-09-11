@@ -1,6 +1,6 @@
 const express = require('express');
 const http = require('http');
-const { PeerServer } = require('peer');
+const { ExpressPeerServer } = require('peer');
 const socketIO = require('socket.io');
 
 // Initialize Express app
@@ -18,11 +18,10 @@ const io = socketIO(server, {
     path: "/socket"
 });
 
-// Set up PeerJS server
-const peerServer = PeerServer({
-    port: process.env.PORT || 3001,
-    path: "/",
-    proxied: true, // required if behind a proxy like Heroku
+// Set up PeerJS server using ExpressPeerServer and attach to the same server
+const peerServer = ExpressPeerServer(server, {
+    path: "/peerjs",
+    proxied: true // required if behind a proxy like Heroku
 });
 
 // Attach PeerJS server to Express app
